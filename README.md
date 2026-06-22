@@ -64,8 +64,9 @@ Evaluated on the held-out test set (time steps 43–49):
 | GAT | 0.0398 | 0.4345 | **0.0934** |
 
 **Takeaways**
-- GNNs aggregate neighborhood context that tabular models can't reach without expensive feature engineering.
-- **GAT** achieves the best illicit-class F1 and its attention weights provide explainable evidence on which neighbors drove a flag.
+- **No model wins outright.** XGBoost has the best PR-AUC (0.0427) and Macro F1 (0.5044), so on overall ranking the GNNs only match — not beat — the tabular baseline.
+- **GAT is the most useful model for fraud.** It triples XGBoost's illicit-class F1 (0.0934 vs 0.0292) — the metric that actually matters for catching fraudsters — by aggregating neighborhood context tabular models can't reach, and its attention weights double as explainable evidence on which neighbors drove a flag.
+- **GraphSAGE** is roughly on par with XGBoost while being **inductive**, so it can score new transactions without retraining.
 - An **ablation study** shows GNNs can recover much of the signal from the 72 hand-engineered aggregated features by learning graph structure directly through message passing.
 - **Focal Loss** is essential — plain cross-entropy collapses to predicting "licit" for everything.
 
