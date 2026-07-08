@@ -115,11 +115,4 @@ GNN final project.pdf                      # project report
 
 ---
 
-## 📚 References
 
-- Weber et al. (2019) — *Anti-Money Laundering in Bitcoin* (Elliptic dataset)
-- Kipf & Welling (2017) — *Semi-Supervised Classification with Graph Convolutional Networks*
-- Hamilton et al. (2017) — *Inductive Representation Learning on Large Graphs* (GraphSAGE)
-- Veličković et al. (2018) — *Graph Attention Networks*
-- Lin et al. (2017) — *Focal Loss for Dense Object Detection*
-- Ying et al. (2019) — *GNNExplainer: Generating Explanations for Graph Neural Networks*
