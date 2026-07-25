@@ -1,4 +1,4 @@
-# 🔍 Detecting Illicit Bitcoin Transactions with Graph Neural Networks
+# Detecting Illicit Bitcoin Transactions with Graph Neural Networks
 
 End-to-end pipeline that trains Graph Neural Networks (GNNs) on the **Elliptic Bitcoin dataset** to flag illicit cryptocurrency transactions (money laundering / fraud) — and explains *why* each transaction was flagged.
 
@@ -6,7 +6,7 @@ Unlike tabular models that treat every transaction as independent, GNNs use **me
 
 ---
 
-## 📊 The Problem
+## The Problem
 
 Fraud detection on Bitcoin is hard because the signal is rare and the data is relational:
 
@@ -24,7 +24,7 @@ With only ~2% illicit nodes, naive accuracy is meaningless — a model that labe
 
 ---
 
-## 🧱 Pipeline
+## Pipeline
 
 The full workflow lives in [`GNN_Elliptic_Fraud_Detection_Final.ipynb`](GNN_Elliptic_Fraud_Detection_Final.ipynb):
 
@@ -52,7 +52,7 @@ All GNNs follow `Input → Conv1 (ReLU + Dropout) → Conv2 → Linear` and are 
 
 ---
 
-## 📈 Results
+## Results
 
 Evaluated on the held-out test set (time steps 43–49):
 
@@ -74,7 +74,7 @@ Evaluated on the held-out test set (time steps 43–49):
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Install dependencies
 ```bash
@@ -96,7 +96,7 @@ Run the cells top to bottom — all plots and metrics are generated inline.
 
 ---
 
-## 📁 Repository
+## Repository
 
 ```
 GNN_Elliptic_Fraud_Detection_Final.ipynb   # full pipeline (this is the project)
@@ -106,7 +106,7 @@ GNN final project.pdf                      # project report
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - **Transductive** setting for most GNNs — embeddings must be recomputed when new nodes arrive (GraphSAGE is the inductive exception).
 - **77% unlabeled** nodes add noise; semi-supervised label propagation could help.
